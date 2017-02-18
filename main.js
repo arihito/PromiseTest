@@ -1,7 +1,11 @@
 var p = new Promise(function(fulfill,reject){
-  console.log(fulfill);
-
-  console.log(reject);
+  setTimeout(function(){
+    document.write(fulfill);
+  },3000)
 });
 
-console.log(p);
+p.then(function(result){
+  document.write("World");
+},function(result){
+  console.log(result);
+});
