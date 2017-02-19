@@ -13,11 +13,11 @@ function getURL(URL){
         // もしステータスコードが200であれば
         req.onload = function () {
             if (req.status === 200) {
-            	// resolve関数に指定した引数を次のthen関数へ移動
-                resolve(req.responseText);
+              // resolve関数に指定した引数を次のthen関数へ移動
+              resolve(req.responseText);
             } else {
-            	// エラーオブジェクトを改めて生成
-                reject(new Error(req.statusText));
+              // エラーオブジェクトを改めて生成
+              reject(new Error(req.statusText));
             }
         };
         req.onerror = function () {
@@ -35,7 +35,7 @@ getURL(URL).then(
 
   // onFulfilled resolveが呼び出された成功時
   function(result){
-    console.log(value);
+    document.write(result);
   }
 ).catch(
 
