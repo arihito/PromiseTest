@@ -30,7 +30,8 @@ function getURL(URL){
 }
 
 // 成功/失敗の処理を登録
-asyncPromise().then(
+var URL = "http://httpbin.org/get";
+getURL(URL).then(
 
   // onFulfilled resolveが呼び出された成功時
   function(result){
